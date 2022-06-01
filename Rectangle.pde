@@ -1,4 +1,4 @@
-final class Rectangle extends Shape {
+class Rectangle extends Shape {
   //Global Variables
   int lPaddleSpeed, rPaddleSpeed, paddleSpeed;
   //

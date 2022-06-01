@@ -1,4 +1,4 @@
-final class Circle extends Shape {
+class Circle extends Shape {
   //Global Variables
   float ballSpeedX, ballSpeedY, directionX=0, directionY=0, ballMoveX, ballMoveY, ballSpeed = 3;
   Boolean ballXGoal, lPaddle, rPaddle;
@@ -10,7 +10,7 @@ final class Circle extends Shape {
     this.ballSpeedX = ballSpeed;
     this.ballSpeedY = ballSpeed; 
     while ( directionX == 0 ) {
-      this.directionX = int (random (-2, 2) );
+      this.directionX = int (random(-2, 2) );
     }//End WHILE
     while ( directionY == 0 ) {
       this.directionY = int (random (-2, 2) );
