@@ -1,8 +1,3 @@
-/*Note:
-Figure out how to support multiple balls
-Create the metaphors / Other needed features
-Submit and become elite waterloo engineer
- */
 //
 //Global Variables & Other Items (Classes)
 ArrayList<Shape> shapes = new ArrayList<Shape>();
