@@ -8,5 +8,7 @@
 - To be written upon project completion
 ## Class Design and Constructors
 - To be written upon project completion
+## Class Flow Chart
+- To be Attached Upon Project Completion
 ## Release Link and Running Instructions
 - To be written upon project completion
