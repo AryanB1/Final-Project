@@ -112,13 +112,15 @@ void setup()
     colourRectRight = color(int( random(50, 200) ), int( random(50, 200) ), int( random(50, 200) ));
     colourBall = color(int( random(50, 200) ), int( random(50, 200) ), int( random(50, 200) ));
   }
-  //Creating circle and rectangle objects 
+  //Creating circle and rectangle, and text objects 
   Rectangle rHexLeft = new Rectangle(appWidth*1/40, appHeight*1/4, rectWidth, rectHeight, colourRectLeft);
   Rectangle rHexRight = new Rectangle(appWidth*39/40-rectWidth, appHeight*1/4, rectWidth, rectHeight, colourRectRight);
   Rectangle rectDropL = new Rectangle(appWidth*1/40, appHeight+100, rectWidth, appHeight*1/25, colourRectLeft, "Left");
   Rectangle rectDropR = new Rectangle(appWidth*39/40-rectWidth, appHeight+100, rectWidth, appHeight*1/25, colourRectRight, "Right");
   Rectangle lBoard = new Rectangle(appWidth/5, 0, appWidth/10, appHeight/10, base);
   Rectangle rBoard = new Rectangle(appWidth*3/5, 0, appWidth/10, appHeight/10, base);
+  Text lBoardText = new Text(lScore, (shapes.get(lBoardElement).x+(shapes.get(lBoardElement).w*1/2)), (shapes.get(lBoardElement).y+(shapes.get(lBoardElement).h*1/2)));
+  Text rBoardText = new Text(rScore, (shapes.get(rBoardElement).x+(shapes.get(rBoardElement).w*1/2)), (shapes.get(rBoardElement).y+(shapes.get(rBoardElement).h*1/2)));
   Rectangle leftLine = new Rectangle(appWidth*1/40, 0, 5, appHeight, base);
   Rectangle rightLine = new Rectangle(appWidth*39/40, 0, 6, appHeight, base);
   Rectangle middleLine = new Rectangle(appWidth*1/2, 0, 5, appHeight, base);
