@@ -17,15 +17,15 @@ private class Text extends Rectangle {
   void draw() {
     if(loop > 1) {
       for(int i = 0; i < loop; i++) {
+        textAlign(CENTER);
         fill(objectColour);
         text(longMessage[i], x, y, w, h);
       }
     }
     else {
-        fill(objectColour);
-        text(message, x, y, w, h);
+      textAlign(CENTER);
+      fill(objectColour);
+      text(message, x, y, w, h);
       }
-    fill(objectColour);
-    text(message, x, y, w, h);
   }
 }

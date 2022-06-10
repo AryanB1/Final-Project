@@ -119,7 +119,7 @@ void setup()
   Rectangle rectDropR = new Rectangle(appWidth*39/40-rectWidth, appHeight+100, rectWidth, appHeight*1/25, colourRectRight, "Right");
   Rectangle lBoard = new Rectangle(appWidth/5, 0, appWidth/10, appHeight/10, base);
   Rectangle rBoard = new Rectangle(appWidth*3/5, 0, appWidth/10, appHeight/10, base);
-  Text lBoardText = new Text(lScore, (appWidth/5+appWidth/20), (appHeight/20));
+  Text lBoardText = new Text(appWidth/5+appWidth/20, appHeight/20, 255, str(lScore));
   Text rBoardText = new Text(rScore, (shapes.get(rBoardElement).x+(shapes.get(rBoardElement).w*1/2)), (shapes.get(rBoardElement).y+(shapes.get(rBoardElement).h*1/2)));
   Rectangle leftLine = new Rectangle(appWidth*1/40, 0, 5, appHeight, base);
   Rectangle rightLine = new Rectangle(appWidth*39/40, 0, 6, appHeight, base);
