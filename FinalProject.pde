@@ -1,4 +1,38 @@
 //
+/*
+My class structare:
+First primary class: Shape (Will set it to x, y ONLY
+1 Constructor
+Mostly out of necessity, as I need to have a constructor so that my subclasses can
+inherit something. 
+)
+Second nested classes: 
+Circle (2 constructors
+1. Creates the primary ball, and any secondary ball as the game progresses
+2. Creates the animation after a game has been won. 
+The circle class is final 
+)
+Rectangle (2 constructors
+1. Creates the paddles needed to play pong
+2. Creates the animation after a goal has been scored
+The rectangle class is final
+) 
+Text (2 constructors
+1. Creates single line text
+2. Creates text that needs to be looped through
+The text class IS NOT final
+)
+Third nested class:
+Display (2 Constructors
+1. Creates the rectangle needed to print text in 
+2. Prints the text
+The display class is final 
+)
+Generalized class progression
+Shape -> Rectangle
+Shape -> Circle
+Shape -> Text -> Display 
+*/
 //Global Variables & Other Items (Classes)
 ArrayList<Shape> shapes = new ArrayList<Shape>();
 Boolean instructionsOn=true, screensaver = false, singleplayer = false, nightmode;
