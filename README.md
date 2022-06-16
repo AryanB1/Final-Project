@@ -6,7 +6,7 @@
 - [Unfinished Features](https://github.com/AryanB1/Final-Project/blob/main/README.md#unfinished-features)
 - [Class Flow Chart](https://github.com/AryanB1/Final-Project/blob/main/README.md#class-flow-chart)
 - [Class Design and Constructors](https://github.com/AryanB1/Final-Project/blob/main/README.md#class-design-and-constructors)
-- [Important Variables and Functions](https://github.com/AryanB1/Final-Project/blob/main/README.md#game-instructions)
+- [Important Variables and Functions](https://github.com/AryanB1/Final-Project/blob/main/README.md#important-variables-and-functions)
 - [Game Instructions](https://github.com/AryanB1/Final-Project/blob/main/README.md#important-variables-and-functions)
 - [Release Link and Running Instructions](https://github.com/AryanB1/Final-Project/blob/main/README.md#release-link-and-running-instructions)
 ## What is the Project?
