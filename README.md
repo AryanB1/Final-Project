@@ -57,4 +57,8 @@
 - If the addition of the left and right scoreboard equals 3, try clicking anywhere in the middle of the screen!
 - Feel Free using key presses or mouse presses to complete commands
 ## Release Link and Running Instructions
-- To be written upon project completion
+- Export the 64 bit windows application
+- Unzip the folder
+- Open the folder
+- Run the application that has the ".exe" ending
+- Release Link: 
