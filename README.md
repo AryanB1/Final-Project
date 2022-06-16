@@ -17,8 +17,7 @@
 - Online Multiplayer Support: Use computer networking principles and webhosting to allow for online multiplayer pong games.
 - Different Background Themes and Theme Selection: Allow the user to select a background to play pong on such as a tennis court, a badminton court, or a table tennis table. 
 ## Class Flow Chart
-- To be Attached Upon Project Completion
-- pic not pdf
+![class_structure](class_structure.png)
 ## Class Design and Constructors
 - To be written upon project completion
 ## Game Instructions
