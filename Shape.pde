@@ -31,5 +31,6 @@ abstract class Shape {
   abstract void ballSpeed();
   abstract void messageGet(String changedMessage);
   abstract void mousePressed();
+  abstract void purposeGet(String changedPurpose);
   //
 }//End Shape

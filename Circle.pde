@@ -135,5 +135,6 @@ class Circle extends Shape {
   };
   void messageGet(String changedMessage) {}
   void mousePressed() {}
+  void purposeGet(String changedPurpose) {}
   //
 }//End Circle

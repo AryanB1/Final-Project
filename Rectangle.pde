@@ -73,5 +73,6 @@ class Rectangle extends Shape {
   void ballSpeed() {}
   void messageGet(String changedMessage) {}
   void mousePressed() {}
+  void purposeGet(String changedPurpose) {}
   //
 }//End Rectangle

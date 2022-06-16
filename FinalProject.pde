@@ -105,17 +105,17 @@ void setup()
   Rectangle leftLine = new Rectangle(appWidth*1/40, 0, 5, appHeight, base);
   Rectangle rightLine = new Rectangle(appWidth*39/40, 0, 6, appHeight, base);
   Rectangle middleLine = new Rectangle(appWidth*1/2, 0, 5, appHeight, base);
-  Rectangle screenBox = new Rectangle(appWidth*2/10, appHeight*4/10, appWidth*6/10, appHeight*2/10, base);
+  Buttons screenBox = new Buttons(appWidth*2/10, appHeight*1/2, appWidth*6/10, appHeight/20, base, "Please Switch your display to landscape mode! Press this prompt to exit application");
   Rectangle lGoalScore = new Rectangle(appWidth*1.5/10, appHeight*4/10, appWidth*3/10, appHeight*2/10, base);
   Rectangle rGoalScore = new Rectangle(appWidth*5.5/10, appHeight*4/10, appWidth*3.5/10, appHeight*2/10, base);
   Circle cHex = new Circle(appWidth*1/2, appHeight*1/2, xDiameter, yDiameter, colourBall);
   Text lBoardText = new Text(appWidth/5+appWidth/20, appHeight/20, 255, str(lScore), appHeight/20, 0, 0, false);
   Text rBoardText = new Text(appWidth*3/5+appWidth/20, appHeight/20, 255, str(rScore), appHeight/20, 0, 0, false);
-//  Text lScoreText = new Text(appWidth/5+appWidth/20, appHeight/20, 255, "left", appHeight/20, 0, 0, false);
-  // Text rScoreText = new Text(appWidth*3/5+appWidth/20, appHeight/20, 255, "right", appHeight/20, 0, 0, false);
+  Text lScoreText = new Text(appWidth*1.5/10+appWidth*3/20, appHeight*2/5+appHeight/10, 255, "Left Player Scored!", appHeight/30, 0, 0, false);
+  Text rScoreText = new Text(appWidth*5.5/10+appWidth*3.5/20, appHeight*2/5+appHeight/10, 255, "Right Player Scored!", appHeight/30, 0, 0, false);
   Buttons start = new Buttons(appWidth*3/5, appHeight*4/5, appWidth*1/10, appHeight*1/10, base,"start");
   Buttons exit = new Buttons(appWidth/5, appHeight*4/5, appWidth*1/10, appHeight*1/10, base,"end");
-  Buttons restart = new Buttons(appWidth*2/5, appHeight*4/5, appWidth*1/10, appHeight*1/10, base, "restart");
+  Buttons restart = new Buttons(appWidth*1/3, appHeight*4/5, appWidth*1/10, appHeight*1/10, base, "restart");
   //Elements 1-14
   shapes.add(rHexLeft); 
   shapes.add(rHexRight); 
@@ -134,6 +134,8 @@ void setup()
   shapes.add(start);
   shapes.add(exit);
   shapes.add(restart);
+  shapes.add(lScoreText);
+  shapes.add(rScoreText);
   for (int i = 15; i < displayHeight; i += 50) {
     //sets colour, to create dotted effect
     Rectangle dots = new Rectangle(appWidth*1/2, i, 5, 25, contrast);
@@ -158,12 +160,8 @@ void draw() {
   if (screenCheck == false ) {
     background(base);
     shapes.get(sBox).objectColour = base;
+    shapes.get(sBox).purposeGet("Please Switch your display to landscape mode! Press this prompt to exit application");
     shapes.get(sBox).draw();
-    fill(contrast);
-    textAlign(CENTER);
-    textSize(displayHeight*1/30);
-    text("Please Switch your display to landscape mode", displayWidth*3/10+displayWidth*1/5, displayHeight*4/10+displayHeight*1/10);
-    noLoop();
 }
 else {
   //If nightmode is true, background is white, and foreground (text and lines) is black
@@ -187,7 +185,9 @@ else {
   int startButton = 15;
   int endButton = 16;
   int restartButton = 17;
-  int mDot = 18;
+  int lScoreT = 18;
+  int rScoreT = 19;
+  int mDot = 20;
   int ballElement = lenMiddle;
     if (reset == true) {
     //Scoreboards to original
@@ -259,11 +259,8 @@ else {
       for(int i = lenBall; i < shapes.size(); i++) {
         shapes.get(i).draw();
       }
+      shapes.get(sBox).purposeGet("Congratulations! Left Player Wins! Press this prompt to restart the game!");
       shapes.get(sBox).draw();
-      fill(contrast);
-      textAlign(CENTER);
-      textSize(displayHeight*1/30);
-      text("Congratulations! Left Player Wins! Press Z to reset game!", displayWidth*3/10+displayWidth*1/5, displayHeight*4/10+displayHeight*1/10);
     }
     else if(rScore >= 5) {
       //Shapes are drawn and redrawn in nearly every iteration which looks way cooler than stationary
@@ -288,11 +285,8 @@ else {
       for(int i = lenBall; i < shapes.size(); i++) {
         shapes.get(i).draw();
       }
-      shapes.get(sBox).draw();
-      fill(contrast);
-      textAlign(CENTER);
-      textSize(displayHeight*1/30);
-      text("Congratulations! Right Player Wins! Press Z to reset game!", displayWidth*3/10+displayWidth*1/5, displayHeight*4/10+displayHeight*1/10);
+     shapes.get(sBox).purposeGet("Congratulations! Right Player Wins! Press this prompt to restart the game!");
+     shapes.get(sBox).draw();
     }
     else{
       // Setting the Right Colour
@@ -310,6 +304,8 @@ else {
       shapes.get(rGoalScore).objectColour = base;
       shapes.get(lBoardText).objectColour = contrast;
       shapes.get(rBoardText).objectColour = contrast;
+      shapes.get(lScoreT).objectColour = contrast;
+      shapes.get(rScoreT).objectColour = contrast;
       for(int i = mDot; i < lenMiddle; i++) shapes.get(i).objectColour = base;
       shapes.get(ballElement).objectColour = colourBall;
       for (int i = ballElement; i < shapes.size(); i++) {
@@ -333,22 +329,14 @@ else {
       }
       //Note: repeats basic FOR-Each like belowss
       for ( int i=1; i< shapes.size(); i++ ) {
-        if(i == startButton || i == endButton) continue;
+        if(i == startButton || i == endButton || i == lScoreT || i == rScoreT ||i == sBox || i >= lenBall) continue;
         shapes.get(i).draw();
         //println("here", i);
       }
       fill(contrast);
       stroke(contrast);
-      if(int(shapes.get(rectL).y) < int(appHeight+50)) {
-        textAlign(CENTER);
-        textSize(displayHeight*1/30);
-        text("Left Player Scored!", shapes.get(lGoalScore).x+(shapes.get(lGoalScore).w/2), shapes.get(lGoalScore).y+(shapes.get(lGoalScore).h/2));
-      }
-      if(int(shapes.get(rectR).y) < int(appHeight+50)) {
-        textAlign(CENTER);
-        textSize(displayHeight*1/30);
-        text("Right Player Scored!", shapes.get(rGoalScore).x+(shapes.get(rGoalScore).w/2), shapes.get(rGoalScore).y+(shapes.get(rGoalScore).h/2));
-    }
+      if(int(shapes.get(rectL).y) < int(appHeight+50)) shapes.get(lScoreT).draw();
+      if(int(shapes.get(rectR).y) < int(appHeight+50)) shapes.get(rScoreT).draw();
     }
   }
 }
@@ -405,10 +393,13 @@ void mousePressed() {
   int startButton = 15;
   int endButton = 16;
   int restartButton = 17;
-  if(instructionsOn == true){
+  int sBox = 5;
+  if(screenCheck == false) shapes.get(sBox).mousePressed();
+  else if(instructionsOn == true){
   shapes.get(startButton).mousePressed();
   shapes.get(endButton).mousePressed();
   }
+  else if(lScore >= 5 || rScore >= 5) shapes.get(sBox).mousePressed();
   else {
     // The inclusion of the 3 is an easter egg to how many times I've rewritten this game
    shapes.get(restartButton).mousePressed();
@@ -417,6 +408,7 @@ void mousePressed() {
      yMouse = int(shapes.get(lenMiddle).y - mouseY);
    }
   } 
-}//End mousePressed
+}
+//End mousePressed
 //
 //End MAIN (Driver) Program
