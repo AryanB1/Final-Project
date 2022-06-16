@@ -1,4 +1,4 @@
-class Circle extends Shape {
+final class Circle extends Shape {
   //Global Variables
   float ballSpeedX, ballSpeedY, directionX=0, directionY=0, ballMoveX, ballMoveY, ballSpeed = 3;
   Boolean ballXGoal, lPaddle, rPaddle;

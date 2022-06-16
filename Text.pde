@@ -1,4 +1,4 @@
-private class Text extends Rectangle {
+final private class Text extends Rectangle {
   String message;
   String longMessage[] = {
   "Please set your screen in landscape mode",
@@ -21,7 +21,8 @@ private class Text extends Rectangle {
   "First one to 5 points wins!!",
   "Press i to close this window! It can be reopened any time you need to see the instructions or take a break!",
   "You can use the o(easy), u(normal), and p(hard) keys to set the ball speed. By default, the speed is set to easy",
-  "If the addition of the left and right scoreboard equals 3, try clicking anywhere in the middle of the screen!"
+  "If the addition of the left and right scoreboard equals 3, try clicking anywhere in the middle of the screen!",
+  "Feel Free using key presses or mouse presses to complete commands!"
   };
   float size;
   boolean multipleLines;

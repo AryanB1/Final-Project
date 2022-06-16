@@ -1,4 +1,4 @@
-class Buttons extends Rectangle {
+final class Buttons extends Rectangle {
   String purpose;
   boolean hover;
   color opposite;
