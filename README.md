@@ -13,9 +13,9 @@
 - There are buttons for starting the game, exiting the game (while the game is on instructions mode, and when the screen mode is in portrait), and restarting the game (while the game is being played, and when the game is won)
 - Although buttons are present in the game, all keypress commands are still available, as if the user does not have a mouse, using a trackpad to click buttons can be inconvienient 
 ## Unfinished Features
-- Full Android Support: At the moment, only a few key features are available through mousePressed, with many features still utilizing keyPressed. For a full port to the Android operating system, touch screen support needs to be added to the following features: Paddle Movement, paddle speed settings, ball speed settings, multiplayer vs singleplayer vs screensaver, and nightmode vs daymode.
-- Online Multiplayer Support: Use computer networking principles and webhosting to allow for online multiplayer pong games.
-- Different Background Themes and Theme Selection: Allow the user to select a background to play pong on such as a tennis court, a badminton court, or a table tennis table. 
+- Full Android Support: At the moment, only a few key features are available through mousePressed, with many features still utilizing keyPressed. For a full port to the Android operating system, touch screen support needs to be added to the following features: Paddle Movement, paddle speed settings, ball speed settings, multiplayer vs singleplayer vs screensaver, and nightmode vs daymode. These features would be added through a deeper use of the Buttons class, and by refactoring my existing classes to support mousePressed() rather than keyPressed()
+- Online Multiplayer Support: Use computer networking principles and webhosting to allow for online multiplayer pong games. Implementing this feature would require a deeper understanding of network protocals and server management rather than any specific class in my code
+- Different Background Themes and Theme Selection: Allow the user to select a background to play pong on such as a tennis court, a badminton court, or a table tennis table. This would be implemented through a deeper use of my Buttons class 
 ## Class Flow Chart
 ![class_structure](class_structure.png)
 ## Class Design and Constructors
@@ -30,7 +30,7 @@
 - Text Class
   - The first constructor is used for single lines of text such as the score 
   - The second constructor is used for multiple lines of text such as the instructions
- - Buttons 
+ - Buttons Class
   - The constructor is used to create the elements needed for the button to be visible, have text on it, and the parameters needed to control button clicks. Hover functionality has also been added to the buttons
 ## Game Instructions
 **All Instructions are present in the game, however they have also been added below:**
