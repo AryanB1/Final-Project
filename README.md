@@ -1,4 +1,13 @@
 # Final-Project
+## Table of Contents
+- [What is the Project?](https://github.com/AryanB1/Final-Project/blob/main/README.md#what-is-the-project)
+- [Purpose and Personal Interest](https://github.com/AryanB1/Final-Project/blob/main/README.md#purpose-and-personal-interest)
+- [Features and Easter Eggs](https://github.com/AryanB1/Final-Project/blob/main/README.md#features-and-easter-eggs)
+- [Unfinished Features](https://github.com/AryanB1/Final-Project/blob/main/README.md#unfinished-features)
+- [Class Flow Chart](https://github.com/AryanB1/Final-Project/blob/main/README.md#class-flow-chart)
+- [Class Design and Constructors](https://github.com/AryanB1/Final-Project/blob/main/README.md#class-design-and-constructors)
+- [Game Instructions](https://github.com/AryanB1/Final-Project/blob/main/README.md#game-instructions)
+- [Release Link and Running Instructions](https://github.com/AryanB1/Final-Project/blob/main/README.md#release-links-and-running-instructions)
 ## What is the Project?
 - This project is a pong game ([Wikipedia](https://en.wikipedia.org/wiki/Pong))
 - This project is written in the processing language ([Processing Documentation](https://processing.org/reference))
