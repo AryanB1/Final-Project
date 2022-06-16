@@ -6,7 +6,8 @@
 - [Unfinished Features](https://github.com/AryanB1/Final-Project/blob/main/README.md#unfinished-features)
 - [Class Flow Chart](https://github.com/AryanB1/Final-Project/blob/main/README.md#class-flow-chart)
 - [Class Design and Constructors](https://github.com/AryanB1/Final-Project/blob/main/README.md#class-design-and-constructors)
-- [Game Instructions](https://github.com/AryanB1/Final-Project/blob/main/README.md#game-instructions)
+- [Important Variables and Functions](https://github.com/AryanB1/Final-Project/blob/main/README.md#game-instructions)
+- [Game Instructions](https://github.com/AryanB1/Final-Project/blob/main/README.md#important-variables-and-functions)
 - [Release Link and Running Instructions](https://github.com/AryanB1/Final-Project/blob/main/README.md#release-link-and-running-instructions)
 ## What is the Project?
 - This project is a pong game ([Wikipedia](https://en.wikipedia.org/wiki/Pong))
@@ -30,17 +31,37 @@
 ## Class Design and Constructors
 - Abstract Class Shape
   - The constructor contains source variables that all subclasses use, all core variables are both gotten and set from the variables found in shapes
+  - This class also initializes an array list, and every object from any subclass is displayed on the screen using this class
 - Circle Class
   - The first constructor creates the balls that are used to play the game
   - The second constructor is used to create the victory animation
+  - The first constructor uses a method to cause the ball to bounce by tracking the position of the paddle and the ball in the draw function of the main program. This method is implemented through calling a common method which is then added as an abstract method in the shapes class, and is then called in the main program
+  - The first constructor uses another common method to indicate the ball speed
+  - The second contructor uses a series of logic statements found in the setup, and draw functions of the main program, so that the circle continuosly move with each changing iteration of the program. 
 - Rectangle Class
   - The first constructor is used to create the paddles, scoreboard, and left / right goal score backgrounds
   - The second constructor is used to create the animation of the paddle reducing in size after each goal is scored
+  - The rectangle class uses two common methods to set the paddle speed, and allow for paddle movement
+  - A method is used in the Circle class to cause the paddle size to shrink, and engages the second constructor to show the animation of the paddle shrinking in size
 - Text Class
   - The first constructor is used for single lines of text such as the score 
   - The second constructor is used for multiple lines of text such as the instructions
+  - The first constructor uses a getter and setter to change the message being displayed based on certain conditions as determined by the draw class
+  - At the moment, there is no getter and setter for the second constructor because the only use for this constructor is to display the instructions, and these instructions never change in the current program. However, for a future version of this program, a similar getter and setter to what is implemented for the first constructor can be used.
  - Buttons Class
-  - The constructor is used to create the elements needed for the button to be visible, have text on it, and the parameters needed to control button clicks. Hover functionality has also been added to the buttons
+  - The constructor is used to create the elements needed for the button to be visible, have text on it, and the parameters needed to control button clicks.
+  - Hover functionality has been added by getting the MouseX and MouseY position, and checking if it is within the rectangular shape of the button. When a user hovers over a button, the fill colour becomes a shade of grey.
+  - A getter and setter is used to change the text for a button depending on the situation.
+  - A method is used to crossreference the button text with a list of commands, and when a button's text is the same as the command text, a specific action occurs when the button is pressed
+## Important Variables and Functions
+There are three important variables used in this program that cannot be explained through the class design portion.
+- Nightmode: This variable changes the background and foreground colours depending on whether it is true or false. When it is true, the colours are changed to night-friendly colours. When it is false, the colours are changed to day-friendly colours
+- Screensaver: Modifies the movements of the paddle so that they are always equal to the ball, thereby creating a screensaver as no point will ever be scored using this feature
+- Singleplayer: This variable determines whether or not singleplayer is active. When singleplayer is active, only the left paddle is functional. 
+- KeyPressed: Tracks when a key is pressed, both the circle and ball class both have keyPressed methods, that are called in the keyPressed function in the main program
+- MousePressed: Tracks when a mouse or trackpad is clicked: The buttons class has a mousePressed method to track when the button is clicked. 
+- Setup: Where all objects are intialized and added to the shapes class
+- Draw: Where all objects are drawn
 ## Game Instructions
 **All Instructions are present in the game, however they have also been added below:**
 - Please set your screen in landscape mode
