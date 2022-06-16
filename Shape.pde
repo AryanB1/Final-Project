@@ -29,5 +29,7 @@ abstract class Shape {
   abstract void leftPaddleMove();
   abstract void rightPaddleMove();
   abstract void ballSpeed();
+  abstract void messageGet(String changedMessage);
+  abstract void mousePressed();
   //
 }//End Shape

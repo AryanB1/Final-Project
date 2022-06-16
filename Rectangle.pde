@@ -71,5 +71,7 @@ class Rectangle extends Shape {
   void paddleBounceRight(float x, float y, float h) {
   }
   void ballSpeed() {}
+  void messageGet(String changedMessage) {}
+  void mousePressed() {}
   //
 }//End Rectangle

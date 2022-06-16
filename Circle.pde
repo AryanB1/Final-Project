@@ -133,5 +133,7 @@ class Circle extends Shape {
   };
   void rightPaddleMove() {
   };
+  void messageGet(String changedMessage) {}
+  void mousePressed() {}
   //
 }//End Circle
