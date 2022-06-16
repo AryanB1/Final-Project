@@ -61,4 +61,4 @@
 - Unzip the folder
 - Open the folder
 - Run the application that has the ".exe" ending
-- Release Link: 
+- Release ([Link](https://github.com/AryanB1/Final-Project/releases/tag/Finished))
